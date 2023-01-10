@@ -1,0 +1,61 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import BlogHeader from '../components/BlogHeader.astro';
+import BlogPostPreview from '../components/BlogPostPreview.astro';
+
+let title = '週刊フロントエンドエンジニア';
+let description = 'The perfect product for your own technews.';
+let permalink = 'https://friday.nekohack.me/';
+
+let allPosts = await Astro.glob('./posts/*.md');
+allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
+---
+
+<html lang="en">
+  <head>
+    <BaseHead {title} {description} {permalink} />
+
+    <style>
+      header {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .content {
+        margin-top: 4rem;
+        margin-bottom: 8rem;
+      }
+
+      .content :global(main > * + *) {
+        margin-top: 1rem;
+      }
+
+      .latest {
+        font-size: 2.5rem;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="content">
+      <BlogHeader {title} {description} />
+      <div aria-label="Blog post list">
+        <div class="grid">
+          {allPosts.map((p) => <BlogPostPreview post={p} />)}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<style>
+  .grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+</style>

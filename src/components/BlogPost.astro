@@ -1,0 +1,46 @@
+---
+import Author from './Author.astro';
+
+export interface Props {
+  title: string;
+  author: string;
+  publishDate: string;
+  heroImage: string;
+  alt: string;
+}
+
+const { title, author, image, alt } = Astro.props
+---
+
+<div class="content">
+  <h1 class="post-title">{title}</h1>
+  <Author name="@jiyuujin" href="https://twitter.com/jiyuujinlab" />
+  <slot />
+</div>
+
+<style>
+  .content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 4rem;
+    margin-bottom: 8rem;
+  }
+
+  .content :global(main > * + *) {
+    margin-top: 1rem;
+  }
+
+  .title,
+  .publish-date,
+  .author {
+    font-size: 1.25rem;
+  }
+
+  .title {
+    font-size: 2.25rem;
+    font-weight: 700;
+  }
+</style>

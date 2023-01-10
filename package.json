@@ -1,0 +1,36 @@
+{
+  "name": "ohayo-friday",
+  "description": "",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "npm run build:front && npm run build:feeds",
+    "build:front": "astro build",
+    "build:feeds": "node --loader ts-node/esm scripts/feeds.mjs",
+    "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx,md,mdx,css,html,yml,yaml,scss,sass}\" --ignore-path .gitignore",
+    "textlint": "textlint ./src/pages/posts/**",
+    "textlint:fix": "textlint ./src/pages/posts/** --fix"
+  },
+  "dependencies": {
+    "svelte": "3.55.0"
+  },
+  "devDependencies": {
+    "@astrojs/svelte": "1.0.2",
+    "astro": "1.9.1",
+    "feed": "4.2.2",
+    "fs-extra": "11.1.0",
+    "prettier": "2.8.2",
+    "prettier-plugin-astro": "0.7.2",
+    "remark-frontmatter": "4.0.1",
+    "remark-parse": "10.0.1",
+    "remark-stringify": "10.0.2",
+    "textlint": "12.5.1",
+    "textlint-rule-preset-ja-technical-writing": "^7.0.0",
+    "textlint-rule-preset-nekohack-inc": "git+https://github.com/nekohack/textlint-rule-preset-nekohack-inc.git",
+    "textlint-rule-spellcheck-tech-word": "^5.0.0",
+    "to-vfile": "7.2.3",
+    "ts-node": "10.9.1",
+    "unified": "10.1.2"
+  }
+}

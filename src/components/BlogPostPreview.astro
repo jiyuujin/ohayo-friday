@@ -1,0 +1,54 @@
+---
+export interface Props {
+  post: {
+    frontmatter: {
+      author: string;
+      authorTwitter: string;
+      category: string;
+      title: string;
+      type: string;
+      date: string;
+      tags: string[];
+    }
+  }
+}
+
+const { post } = Astro.props
+---
+
+<div class="item">
+  <a href={post.url}>
+    {post.frontmatter.title}
+  </a>
+</div>
+
+<style>
+  .hero-image {
+    object-fit: cover;
+    object-position: center;
+    padding: 4px;
+  }
+
+  @media (max-width: 50em) {
+    .hero-image {
+      height: 160px;
+      margin-top: 0;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .item {
+    border-radius: 10px;
+    padding: 15px;
+    text-align: left;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  p {
+    text-align: left;
+  }
+</style>
