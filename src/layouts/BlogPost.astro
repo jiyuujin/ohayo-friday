@@ -2,6 +2,10 @@
 import BaseHead from '../components/BaseHead.astro'
 import BlogPost from '../components/BlogPost.astro'
 
+import '../assets/lib/customize/_article.scss'
+import '../assets/lib/customize/_twitter.scss'
+import '../assets/lib/_layout.scss'
+
 const { content } = Astro.props
 const { lang, title, description, publishDate, author, heroImage, permalink, alt } = content
 ---

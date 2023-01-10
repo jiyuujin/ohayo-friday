@@ -16,8 +16,8 @@ tags:
 
 おはようエンジニアをご存じでしょうか？ 一昨年より始まっているのですが、朝 9 時ころからフロントエンドエンジニア界隈の最新アップデートを音声でお届けするというものです。ご興味ある方はぜひ以下の Twitter アカウントをフォローしてみてください。
 
-– [`@jiyuujinlab`](https://twitter.com/jiyuujinlab)
-– [`@exyuukit`](https://twitter.com/exyuukit)
+1. 既存の [`@jiyuujinlab`](https://twitter.com/jiyuujinlab)
+2. 本名アカウントとして [`@exyuukit`](https://twitter.com/exyuukit)
 
 ## 今年のおはようエンジニアでは
 

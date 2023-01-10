@@ -25,6 +25,7 @@
     "remark-frontmatter": "4.0.1",
     "remark-parse": "10.0.1",
     "remark-stringify": "10.0.2",
+    "sass": "1.57.1",
     "textlint": "12.5.1",
     "textlint-rule-preset-ja-technical-writing": "^7.0.0",
     "textlint-rule-preset-nekohack-inc": "git+https://github.com/nekohack/textlint-rule-preset-nekohack-inc.git",
