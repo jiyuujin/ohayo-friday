@@ -1,6 +1,8 @@
 ---
 import BaseHead from '../components/BaseHead.astro'
+import BlogHeader from '../components/BlogHeader.astro'
 import BlogPost from '../components/BlogPost.astro'
+import Nav from '../components/Nav.astro'
 
 import '../assets/lib/customize/_article.scss'
 import '../assets/lib/customize/_twitter.scss'
@@ -54,6 +56,11 @@ const { lang, title, description, publishDate, author, heroImage, permalink, alt
   </head>
 
   <body>
+    <Nav>
+      <div class="nav">
+        <BlogHeader {title} {description} />
+      </div>
+    </Nav>
     <div class="section">
       <BlogPost {title} {author} {heroImage} {publishDate} {alt}>
         <div class="article">
@@ -65,3 +72,20 @@ const { lang, title, description, publishDate, author, heroImage, permalink, alt
     </div>
   </body>
 </html>
+
+<style>
+  .nav {
+    background: linear-gradient(rgba(250, 250, 250, 50%), rgba(232, 242, 255, 100%));
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+  }
+
+  .nav-item {
+    padding-left: 20px;
+  }
+
+  .nav-link {
+    padding-left: 20px;
+  }
+</style>
