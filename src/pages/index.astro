@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import BlogHeader from '../components/BlogHeader.astro';
 import BlogPostPreview from '../components/BlogPostPreview.astro';
+import Nav from '../components/Nav.astro'
 
 let title = '週刊フロントエンドエンジニア';
 let description = 'The perfect product for your own technews.';
@@ -41,18 +42,28 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new 
   </head>
 
   <body>
+    <Nav>
+      <div class="nav">
+        <BlogHeader title={title} description={description} />
+      </div>
+    </Nav>
     <div class="content">
-      <BlogHeader {title} {description} />
       <div aria-label="Blog post list">
         <div class="grid">
           {allPosts.map((p) => <BlogPostPreview post={p} />)}
         </div>
       </div>
     </div>
-  </body>
+</body>
 </html>
 
 <style>
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+  }
+
   .grid {
     display: grid;
     gap: 10px;
