@@ -19,7 +19,9 @@ const { post } = Astro.props
 
 <div class="item">
   <a href={post.url}>
-    {post.frontmatter.title}
+    <h2>
+      {post.frontmatter.title}
+    </h2>
   </a>
 </div>
 
@@ -30,7 +32,27 @@ const { post } = Astro.props
     text-align: left;
   }
 
-  p {
+  .item a {
+    color: #2c2e2f;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    vertical-align: middle;
+  }
+
+  .item a:visited {
+    color: #2c2e2f;
+  }
+
+  .item h2 {
+    margin: 0;
     text-align: left;
+    font-size: 1.08rem;
+  }
+
+  .item p {
+    text-align: left;
+    font-size: 0.96rem;
   }
 </style>
