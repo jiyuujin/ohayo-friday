@@ -6,6 +6,7 @@ author: jiyuujin
 authorTwitter: exyuukit
 category: article
 title: 週刊フロントエンドエンジニアを開始します
+explain:
 type: post
 date: 2023-01-06
 tags:

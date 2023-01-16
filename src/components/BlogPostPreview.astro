@@ -6,6 +6,7 @@ export interface Props {
       authorTwitter: string;
       category: string;
       title: string;
+      explain: string;
       type: string;
       date: string;
       tags: string[];
@@ -22,6 +23,9 @@ const { post } = Astro.props
     <h2>
       {post.frontmatter.title}
     </h2>
+    <p>
+      {post.frontmatter.explain}
+    </p>
   </a>
 </div>
 
@@ -36,7 +40,8 @@ const { post } = Astro.props
     color: #2c2e2f;
     text-decoration: none;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: space-between;
     vertical-align: middle;
   }
@@ -52,6 +57,7 @@ const { post } = Astro.props
   }
 
   .item p {
+    margin: 0;
     text-align: left;
     font-size: 0.96rem;
   }
