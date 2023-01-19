@@ -50,7 +50,7 @@ https://kokeshi.vercel.app/
 
 [Twemoji が 2023 年になると表示されなくなる問題に対処する](https://zenn.dev/yhatt/articles/60ce0c3ca79994)
 
-[エンジニア組織に発信文化を浸透させるには｜shu223｜note](https://note.com/shu223/n/n138f13a64a72)
+[エンジニア組織に発信文化を浸透させるには｜ shu223 ｜ note](https://note.com/shu223/n/n138f13a64a72)
 
 [Web アプリケーションアクセシビリティ - 今日から始める現場からの改善 (WEB+DB PRESS plus) 単行本 (ソフトカバー) - 2023/2/27](https://www.amazon.co.jp/dp/4297133660)
 
