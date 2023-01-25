@@ -13,11 +13,11 @@
     "textlint:fix": "textlint ./src/pages/posts/** --fix"
   },
   "dependencies": {
-    "svelte": "3.55.0"
+    "svelte": "3.55.1"
   },
   "devDependencies": {
-    "@astrojs/svelte": "1.0.2",
-    "astro": "1.9.1",
+    "@astrojs/svelte": "2.0.0",
+    "astro": "2.0.0",
     "feed": "4.2.2",
     "fs-extra": "11.1.0",
     "prettier": "2.8.2",
