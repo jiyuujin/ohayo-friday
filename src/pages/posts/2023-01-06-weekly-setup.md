@@ -1,7 +1,6 @@
 ---
 setup: |
-  import Layout from '../../layouts/BlogPost.astro'
-  import Cool from '../../components/Author.astro'
+  import BlogPost from '../../layouts/BlogPost.astro'
 author: jiyuujin
 authorTwitter: exyuukit
 category: article
