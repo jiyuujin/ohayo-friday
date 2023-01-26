@@ -28,7 +28,15 @@ image: https://friday.nekohack.me/og/top.png
 - 金曜日は 1 週間の総浚いを目的として新たな形式で開放する
   - 朝 45 分程度に拡大する
 
+## 最後に
+
+それでは、また来週！
+
+Web デベロッパー Yuma Kitamura ([profile](https://yuma-kitamura.nekohack.me/) / [blog](https://blog.nekohack.me/))
+
 ## 2023/01/06 週の主要なアップデート
+
+以後毎週、主要なアップデートをお届けします。
 
 [CircleCI security alert: Rotate any secrets stored in CircleCI (Updated Jan 10)](https://circleci.com/blog/january-4-2023-security-alert/)
 
@@ -59,9 +67,3 @@ https://kokeshi.vercel.app/
 [2022 年の超私的デジタルアクセシビリティ関連 10 大ニュース](https://kidachi.kazuhi.to/blog/archives/041817.html)
 
 [実務で使った React-Hook-Form × Zod の事例紹介 - バイセル Tech Blog](https://tech.buysell-technologies.com/entry/adventcalendar2022-12-24)
-
-## 最後に
-
-それでは、また来週！
-
-Web デベロッパー Yuma Kitamura ([profile](https://yuma-kitamura.nekohack.me/) / [blog](https://blog.nekohack.me/))
