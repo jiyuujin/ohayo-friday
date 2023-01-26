@@ -3,7 +3,7 @@ layout: '../../layouts/BlogPost.astro'
 author: jiyuujin
 authorTwitter: exyuukit
 category: article
-title: 週刊フロントエンドエンジニアを開始します
+title: 金曜日のエンジニアのつどいを開始します
 explain:
 type: post
 date: 2023-01-06
