@@ -15,9 +15,8 @@ import path from 'path'
 const currentDir = './src/pages/posts'
 
 let feed = new Feed({
-  title: '週刊フロントエンドエンジニア',
-  description:
-    '毎週金曜の朝9時ころからフロントエンドエンジニア界隈の最新アップデートを音声でお届けしています。',
+  title: '金曜日のエンジニアのつどい',
+  description: '週刊でエンジニア界隈の最新情報を記録しています',
   feed_url: 'https://friday.nekohack.me/feeds.xml',
   site_url: 'https://friday.nekohack.me/',
   copyright: 'nekohack',
