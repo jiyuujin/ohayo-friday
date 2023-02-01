@@ -20,17 +20,21 @@
 }
 
 .main {
+  padding: 0 8px;
   width: 70%;
   background: #fff;
   @media (max-width: 600px) {
+    padding: 0;
     width: 100%;
   }
 }
 
 .side {
+  padding: 0 8px;
   width: 30%;
   background: rgba(232, 242, 255, 100%);
   @media (max-width: 600px) {
+    padding: 0;
     width: 100%;
   }
 }
