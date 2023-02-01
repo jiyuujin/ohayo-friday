@@ -19,6 +19,13 @@ const { lang, title, explain, publishDate, author, heroImage, permalink, alt } =
 
 let allPosts = await Astro.glob('../pages/posts/*.md')
 allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf())
+
+let allIcons = [
+  { name: 'github', url: 'https://github.com/jiyuujin' },
+  // { name: 'hatena', url: 'https://hatena.ne.jp/' },
+  { name: 'note', url: 'https://note.com/uraneko' },
+  { name: 'twitter', url: 'https://twitter.com/jiyuujinlab' },
+]
 ---
 
 <html lang={lang || 'ja'}>
@@ -89,6 +96,13 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new 
             width={144}
             height={144}
           />
+        </div>
+        <div class="social">
+          {allIcons.map((s) => (
+            <a href={s.url} target="_blank" rel="noopenner noreferrer">
+              <Icon name={`${s.name}_logo`} />
+            </a>
+          ))}
         </div>
         <div aria-label="Blog post list">
           <h2>最近の投稿</h2>
