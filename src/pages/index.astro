@@ -1,12 +1,13 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import BlogHeader from '../components/BlogHeader.astro';
+import BlogFooter from '../components/BlogFooter.astro';
 import BlogPostPreview from '../components/BlogPostPreview.astro';
-import Nav from '../components/Nav.astro'
 
 let title = '金曜日のエンジニアのつどい';
 let description = '週刊でエンジニア界隈の最新情報を記録しています';
 let permalink = 'https://friday.nekohack.me/';
+let author = 'jiyuujin';
 
 let allPosts = await Astro.glob('./posts/*.md');
 allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
@@ -18,28 +19,30 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new 
   </head>
 
   <body>
-    <Nav>
-      <div class="nav">
-        <BlogHeader title={title} description={description} />
-      </div>
-    </Nav>
+    <div class="header">
+      <BlogHeader title={title} description={description} />
+    </div>
     <div class="content">
+      <h2>投稿の一覧</h2>
       <div aria-label="Blog post list">
         <div class="grid">
           {allPosts.map((p) => <BlogPostPreview post={p} />)}
         </div>
       </div>
     </div>
-</body>
+    <div class="footer">
+      <BlogFooter {author} />
+    </div>
+  </body>
 </html>
 
 <style>
-  .nav {
+  .header {
     z-index: 199;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    height: 6rem;
     background: #fff;
     transition: 200ms;
   }

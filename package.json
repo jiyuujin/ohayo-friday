@@ -16,8 +16,9 @@
     "svelte": "3.55.1"
   },
   "devDependencies": {
-    "@astrojs/svelte": "2.0.0",
-    "astro": "2.0.0",
+    "@astrojs/image": "0.13.1",
+    "@astrojs/svelte": "2.0.1",
+    "astro": "2.0.4",
     "feed": "4.2.2",
     "fs-extra": "11.1.0",
     "prettier": "2.8.2",
@@ -26,6 +27,7 @@
     "remark-parse": "10.0.1",
     "remark-stringify": "10.0.2",
     "sass": "1.57.1",
+    "sharp": "0.31.3",
     "textlint": "12.5.1",
     "textlint-rule-preset-ja-technical-writing": "^7.0.0",
     "textlint-rule-preset-nekohack-inc": "git+https://github.com/nekohack/textlint-rule-preset-nekohack-inc.git",
