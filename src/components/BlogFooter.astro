@@ -1,0 +1,33 @@
+---
+import Author from './Author.astro';
+
+const { author } = Astro.props
+---
+
+<div class="footer">
+  <h2 class="copyright">{`Copyright ©︎ 2023 ${author} All rights reserved.`}</h2>
+  <Author name="@jiyuujin" href="https://twitter.com/jiyuujinlab" />
+</div>
+
+<style>
+  .copyright {
+    padding: 0;
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    gap: 12px;
+    background: rgba(232, 242, 255, 100%);
+    border-top: 1px solid var(--theme-divider);
+  }
+
+  .footer > * {
+    margin: 0;
+  }
+</style>

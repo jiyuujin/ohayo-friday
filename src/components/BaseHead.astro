@@ -3,7 +3,7 @@ export type Props = {
   title: string
   description: string
   permalink: string
-  image: string
+  image?: string
 }
 
 const { title = '金曜日のエンジニアのつどい', description, permalink, image } = Astro.props;
