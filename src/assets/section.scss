@@ -22,11 +22,17 @@
 .main {
   width: 70%;
   background: #fff;
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 }
 
 .side {
   width: 30%;
   background: rgba(232, 242, 255, 100%);
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 }
 
 .headline {
@@ -34,6 +40,11 @@
   display: inline;
   font-size: 1.82rem;
   font-weight: 700;
+  line-height: 2;
+  @media (max-width: 600px) {
+    width: 100%;
+    line-height: 1.4;
+  }
 }
 
 .avatar {

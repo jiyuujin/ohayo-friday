@@ -73,7 +73,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new 
         <BlogPost {title} {author} {heroImage} {publishDate} {alt}>
           <div class="article">
             <div class="post-detail">
-              <div style={{ textAlign: "left", lineHeight: 2 }}>
+              <div style={{ textAlign: "left" }}>
                 <div class="headline">{explain}</div>
               </div>
               <slot />
