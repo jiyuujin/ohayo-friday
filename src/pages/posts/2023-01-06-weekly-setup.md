@@ -14,7 +14,7 @@ image: https://friday.nekohack.me/og/top.png
 
 みなさん、こんにちは。Web デベロッパーの Yuma Kitamura です。
 
-おはようエンジニアをご存じでしょうか？ 一昨年より始まっているのですが、朝 9 時ころからフロントエンドエンジニア界隈の最新アップデートを音声でお届けするというものです。ご興味ある方はぜひ以下の Twitter アカウントをフォローしてみてください。
+おはようエンジニアをご存じでしょうか？ 一昨年より始まっているのですが、朝 9 時ころからエンジニア (Web/App) 界隈の最新アップデートを音声でお届けするというものです。ご興味ある方はぜひ以下の Twitter アカウントをフォローしてみてください。
 
 1. 既存の [`@jiyuujinlab`](https://twitter.com/jiyuujinlab)
 2. 本名アカウントとして [`@exyuukit`](https://twitter.com/exyuukit)
