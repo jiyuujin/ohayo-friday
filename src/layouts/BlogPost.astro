@@ -4,7 +4,6 @@ import { Image } from '@astrojs/image/components'
 import BaseHead from '../components/BaseHead.astro'
 import BlogHeader from '../components/BlogHeader.astro'
 import BlogFooter from '../components/BlogFooter.astro'
-import BlogPostPreview from '../components/BlogPostPreview.astro'
 import BlogPost from '../components/BlogPost.astro'
 
 import '../assets/lib/customize/_article.scss'
@@ -120,10 +119,18 @@ let allIcons = [
             </div>
           </div>
         )}
-        <div aria-label="Blog post list">
-          <h2>最近の投稿</h2>
+        <div aria-label="Blog recent list">
+          <h2>最近 (直近 5 件) の投稿</h2>
           <div class="grid">
-            {allPosts.map((p) => <BlogPostPreview post={p} />)}
+            {allPosts
+              .slice(0, 5)
+              .map((p) => (
+                <p>
+                  <a href={p.url}>
+                    {p.frontmatter.title}
+                  </a>
+                </p>
+              ))}
           </div>
         </div>
       </div>
