@@ -26,16 +26,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new 
         background: #fff;
         transition: 200ms;
       }
-    
-      .content {
-        margin-top: 4rem;
-        margin-bottom: 8rem;
-      }
-    
-      .content :global(main > * + *) {
-        margin-top: 1rem;
-      }
-    
+
       .grid {
         display: grid;
         gap: 10px;

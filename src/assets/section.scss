@@ -1,13 +1,3 @@
-.header {
-  z-index: 199;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  background: rgba(232, 242, 255, 100%);
-  transition: 200ms;
-}
-
 .section {
   margin: 8px 0;
   background: rgba(232, 242, 255, 100%);
@@ -67,7 +57,7 @@
   justify-content: center;
   gap: 8px;
   svg {
-    width: 36px;
-    height: 36px;
+    width: 24px;
+    height: 24px;
   }
 }
