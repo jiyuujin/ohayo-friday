@@ -64,7 +64,7 @@ https://kokeshi.vercel.app/
 
 [エンジニア組織に発信文化を浸透させるには｜ shu223 ｜ note](https://note.com/shu223/n/n138f13a64a72)
 
-### アクセシビリティ本の出版
+### Web アプリケーションアクセシビリティの出版
 
 [Web アプリケーションアクセシビリティ - 今日から始める現場からの改善 (WEB+DB PRESS plus) 単行本 (ソフトカバー) - 2023/2/27](https://www.amazon.co.jp/dp/4297133660)
 
