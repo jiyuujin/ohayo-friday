@@ -3,6 +3,7 @@ import remarkToc from 'remark-toc'
 import rehypeToc from 'rehype-toc'
 import image from '@astrojs/image'
 import svelte from '@astrojs/svelte'
+import vue from '@astrojs/vue'
 
 // https://astro.build/config
 export default defineConfig({
@@ -29,6 +30,7 @@ export default defineConfig({
     ],
     integrations: [
         svelte(),
+        vue(),
         image({
             serviceEntryPoint: '@astrojs/image/sharp',
         }),

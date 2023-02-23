@@ -5,6 +5,7 @@ import BaseHead from '../components/BaseHead.astro'
 import BlogHeader from '../components/BlogHeader.astro'
 import BlogFooter from '../components/BlogFooter.astro'
 import BlogPost from '../components/BlogPost.astro'
+import GitHubRibbon from '../components/GitHubRibbon.vue'
 
 import '../assets/lib/customize/_article.scss'
 import '../assets/lib/customize/_twitter.scss'
@@ -54,6 +55,7 @@ let allIcons = [
   </head>
 
   <body>
+    <GitHubRibbon />
     <div class="header">
       <BlogHeader {title} description={explain} />
     </div>
