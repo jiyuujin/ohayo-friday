@@ -17,8 +17,8 @@ const currentDir = './src/pages/posts'
 let feed = new Feed({
   title: '金曜日のエンジニアのつどい',
   description: '週刊でエンジニア界隈の最新情報を記録しています',
-  feed_url: 'https://friday.nekohack.me/feeds.xml',
-  site_url: 'https://friday.nekohack.me/',
+  feed_url: 'https://ohayo-friday.nekohack.me/feeds.xml',
+  site_url: 'https://ohayo-friday.nekohack.me/',
   copyright: 'nekohack',
   language: 'ja',
 })
@@ -39,8 +39,8 @@ fs.readdir(currentDir, function (err, files) {
                 .replace('\n', '')
               feed.items.push({
                 title: title,
-                id: `https://friday.nekohack.me/posts/${file.replace('.md', '')}`,
-                link: `https://friday.nekohack.me/posts/${file.replace('.md', '')}`,
+                id: `https://ohayo-friday.nekohack.me/posts/${file.replace('.md', '')}`,
+                link: `https://ohayo-friday.nekohack.me/posts/${file.replace('.md', '')}`,
                 author: [
                   {
                     name: 'jiyuujin',
