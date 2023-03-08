@@ -22,9 +22,14 @@ const { post } = Astro.props
   <a href={post.url}>
     <h2>
       {post.frontmatter.title}
-    </h2>
+      {post.frontmatter.explain !== '' && (
+        <span>
+          {`: ${post.frontmatter.explain}`}
+        </span>
+      )}
+      </h2>
     <p>
-      {post.frontmatter.explain}
+      {post.frontmatter.title}
     </p>
   </a>
 </div>
@@ -44,6 +49,8 @@ const { post } = Astro.props
     align-items: flex-start;
     justify-content: space-between;
     vertical-align: middle;
+    border-left: 3px solid #fff;
+    padding-left: 1em;
   }
 
   .item a:visited {
@@ -53,11 +60,11 @@ const { post } = Astro.props
   .item h2 {
     margin: 0;
     text-align: left;
-    font-size: 1.08rem;
+    font-size: 1.2rem;
   }
 
   .item p {
-    margin: 0;
+    margin-bottom: 0;
     text-align: left;
     font-size: 0.96rem;
   }
