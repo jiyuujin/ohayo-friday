@@ -17,16 +17,16 @@
     "textlint:fix": "textlint ./src/pages/posts/** --fix"
   },
   "dependencies": {
-    "svelte": "3.55.1",
+    "svelte": "3.56.0",
     "vue": "3.2.47"
   },
   "devDependencies": {
-    "@astrojs/image": "0.13.1",
-    "@astrojs/svelte": "2.0.1",
-    "@astrojs/vue": "2.0.1",
+    "@astrojs/image": "0.16.0",
+    "@astrojs/svelte": "2.1.0",
+    "@astrojs/vue": "2.1.0",
     "@typescript-eslint/eslint-plugin": "5.50.0",
     "@typescript-eslint/parser": "5.50.0",
-    "astro": "2.0.4",
+    "astro": "2.1.2",
     "eslint": "8.33.0",
     "eslint-config-prettier": "8.6.0",
     "eslint-plugin-astro": "0.23.0",
