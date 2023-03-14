@@ -4,7 +4,7 @@ author: jiyuujin
 authorTwitter: jiyuujinlab
 category: article
 title: アーカイヴ - 2022/11/18 週
-explain: Nuxt 3 リリース、Designship 2022 速報、Notion AI ベータ版の申込開始
+explain: Nuxt 3.0 リリース、Designship 2022 速報、Notion AI ベータ版の申込開始
 type: post
 date: 2022-11-18
 tags:
