@@ -22,6 +22,8 @@ image: https://friday.nekohack.me/og/top.png
 
 [Announcing 3.0 - Nuxt](https://nuxt.com/v3)
 
+詳細は [Nuxt 3.0 リリース](https://github.com/nuxt/nuxt/releases/tag/v3.0.0) をご確認いただきたい。
+
 [Introducing Notion AI](https://www.notion.so/product/ai)
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I&#39;m convinced that one of the biggest architectural mistakes of the past decade was going full microservice<br><br>On a spectrum of monolith to microservices, I suggest the following:<br><br>Monolith &gt; apps &gt; services &gt; microservices<br><br>So, some thoughts</p>&mdash; Jason Warner (@jasoncwarner) <a href="https://twitter.com/jasoncwarner/status/1592227285024636928?ref_src=twsrc%5Etfw">November 14, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
