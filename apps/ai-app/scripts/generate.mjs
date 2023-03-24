@@ -30,7 +30,18 @@ async function main() {
     })
 
     try {
-      await page.goto('file:///' + path.join(process.cwd(), 'scripts/reaction-preview.html'))
+      await page.evaluate(() => {
+        const style = document.createElement('style')
+        style.textContent = `
+          @import url('//fonts.googleapis.com/css?family=M+PLUS+Rounded+1c|Roboto:300,400,500,700|Material+Icons');
+          div, input, a, p{ font-family: "M PLUS Rounded 1c", sans-serif; };`
+        document.head.appendChild(style)
+        document.body.style.fontFamily = '\'M PLUS Rounded 1c\', sans-serif'
+      })
+
+      await page.goto('file:///' + path.join(process.cwd(), 'scripts/reaction-preview.html'), {
+        waitUntil: 'networkidle0',
+      })
 
       await page.$eval(
         'h1',
