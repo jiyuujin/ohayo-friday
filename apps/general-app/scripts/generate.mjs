@@ -20,7 +20,10 @@ async function main() {
 
   for (const mdFilename of postFiles) {
     const title = await getPostReaction(mdFilename)
-    const browser = await puppeteer.launch()
+    const browser = await puppeteer.launch({
+      headless: true,
+      args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    })
     const page = await browser.newPage()
     await page.setExtraHTTPHeaders({
       'Accept-Language': 'ja-JP',
