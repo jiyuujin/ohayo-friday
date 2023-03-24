@@ -9,7 +9,7 @@ type: post
 date: 2023-01-06
 tags:
   - Review
-reaction: ⛰
+image: https://ohayo-friday.nekohack.me/og/top.png
 ---
 
 みなさん、こんにちは。Web デベロッパーの Yuma Kitamura です。
