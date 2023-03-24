@@ -31,12 +31,7 @@ let allIcons = [
 
 <html lang={lang || 'ja'}>
   <head>
-    <BaseHead
-      {title}
-      description={explain}
-      {permalink}
-      image={`https://ohayo-friday.nekohack.me/og/${url.replace('/posts/', '')}.png`}
-    />
+    <BaseHead {title} description={explain} {permalink} />
 
     <style is:global>
       body {

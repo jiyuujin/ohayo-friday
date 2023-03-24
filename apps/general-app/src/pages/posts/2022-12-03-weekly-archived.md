@@ -9,7 +9,7 @@ type: post
 date: 2022-12-03
 tags:
   - Review
-reaction: 🌸
+image: https://ohayo-friday.nekohack.me/og/top.png
 ---
 
 遅ればせながら、2022/12/03 週の主なアップデートについて振り返っていきましょう。
