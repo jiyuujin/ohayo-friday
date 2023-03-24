@@ -1,0 +1,52 @@
+{
+  "name": "general-app",
+  "description": "",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "npm run build:feeds && npm run build:front",
+    "build:front": "astro build",
+    "build:feeds": "node --loader ts-node/esm scripts/feeds.mjs",
+    "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx,md,mdx,css,html,yml,yaml,scss,sass}\" --ignore-path .gitignore",
+    "lint": "npm run eslint && npm run textlint",
+    "lint:fix": "npm run eslint:fix && npm run textlint:fix",
+    "eslint": "eslint . --ext js,jsx,ts,tsx,astro",
+    "eslint:fix": "eslint . --ext js,jsx,ts,tsx,astro --fix",
+    "textlint": "textlint ./src/pages/posts/**",
+    "textlint:fix": "textlint ./src/pages/posts/** --fix"
+  },
+  "dependencies": {
+    "svelte": "3.56.0",
+    "vue": "3.2.47"
+  },
+  "devDependencies": {
+    "@astrojs/image": "0.16.0",
+    "@astrojs/svelte": "2.1.0",
+    "@astrojs/vue": "2.1.0",
+    "@typescript-eslint/eslint-plugin": "5.50.0",
+    "@typescript-eslint/parser": "5.50.0",
+    "astro": "2.1.2",
+    "eslint": "8.33.0",
+    "eslint-config-prettier": "8.6.0",
+    "eslint-plugin-astro": "0.23.0",
+    "feed": "4.2.2",
+    "fs-extra": "11.1.0",
+    "prettier": "2.8.2",
+    "prettier-plugin-astro": "0.7.2",
+    "rehype-toc": "3.0.2",
+    "remark-frontmatter": "4.0.1",
+    "remark-parse": "10.0.1",
+    "remark-stringify": "10.0.2",
+    "remark-toc": "8.0.1",
+    "sass": "1.57.1",
+    "sharp": "0.31.3",
+    "textlint": "12.5.1",
+    "textlint-rule-preset-ja-technical-writing": "^7.0.0",
+    "textlint-rule-preset-nekohack-inc": "git+https://github.com/nekohack/textlint-rule-preset-nekohack-inc.git",
+    "textlint-rule-spellcheck-tech-word": "^5.0.0",
+    "to-vfile": "7.2.3",
+    "ts-node": "10.9.1",
+    "unified": "10.1.2"
+  }
+}
