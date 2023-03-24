@@ -26,4 +26,5 @@ JOURNEY.md
 
 .idea
 
+apps/ai-app/public/feeds.xml
 apps/general-app/public/feeds.xml
