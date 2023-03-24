@@ -16,7 +16,7 @@ import '../assets/summary.scss'
 import Icon from '../components/Icon.astro'
 
 const { content, headings } = Astro.props
-const { lang, title, explain, publishDate, author, heroImage, permalink, url, alt } = content
+const { lang, title, explain, slug, publishDate, author, heroImage, permalink, url, alt } = content
 
 let allPosts = await Astro.glob('../pages/posts/*.md')
 allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf())
@@ -35,7 +35,7 @@ let allIcons = [
       {title}
       description={explain}
       {permalink}
-      image={`https://ohayo-friday.nekohack.me/og/${url.replace('/posts/', '')}.png`}
+      image={`https://ohayo-friday.nekohack.me/og/${slug}.png`}
     />
 
     <style is:global>

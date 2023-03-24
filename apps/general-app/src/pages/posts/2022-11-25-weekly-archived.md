@@ -5,6 +5,7 @@ authorTwitter: jiyuujinlab
 category: article
 title: アーカイヴ - 2022/11/25 週
 explain: Meety 脆弱性、Stable Diffusion v2 リリース、Prettier 2.8 リリース、ESLint を Rust へ書き直し
+slug: 2022-11-25-weekly-archived
 type: post
 date: 2022-11-25
 tags:

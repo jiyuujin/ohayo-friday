@@ -5,6 +5,7 @@ authorTwitter: jiyuujinlab
 category: article
 title: アーカイヴ - 2022/12/23 週
 explain: Vue Fes 2022 や Rev Up 2022、FlutterKaigi 2022 の裏側、SWR v2 リリース、Google が選ぶベスト Chrome 拡張機能 2022 年版
+slug: 2022-12-23-weekly-archived
 type: post
 date: 2022-12-23
 tags:

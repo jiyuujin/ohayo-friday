@@ -5,6 +5,7 @@ authorTwitter: exyuukit
 category: article
 title: 金曜日のエンジニアのつどいを開始します
 explain:
+slug: 2023-01-06-weekly-setup
 type: post
 date: 2023-01-06
 tags:

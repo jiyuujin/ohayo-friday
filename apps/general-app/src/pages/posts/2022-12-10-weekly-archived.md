@@ -5,6 +5,7 @@ authorTwitter: jiyuujinlab
 category: article
 title: アーカイヴ - 2022/12/10 週
 explain: デザインツールの調査結果 2022 年版、デジタル庁のアクセシビリティの取組、AI による PR 並びにコミットメッセージの自動生成
+slug: 2022-12-10-weekly-archived
 type: post
 date: 2022-12-10
 tags:

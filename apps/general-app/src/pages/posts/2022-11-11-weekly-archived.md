@@ -5,6 +5,7 @@ authorTwitter: jiyuujinlab
 category: article
 title: アーカイヴ - 2022/11/11 週
 explain: Agile Japan 2022、OpenSSL の脆弱性、Vite 4.0 alpha リリース、React の新しいフック use()、
+slug: 2022-11-11-weekly-archived
 type: post
 date: 2022-11-11
 tags:

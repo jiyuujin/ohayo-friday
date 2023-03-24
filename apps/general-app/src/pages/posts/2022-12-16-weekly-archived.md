@@ -5,6 +5,7 @@ authorTwitter: jiyuujinlab
 category: article
 title: アーカイヴ - 2022/12/16 週
 explain: SvelteKit 1.0 リリース、VS Code 拡張機能 StickyScroll、Stable Diffusion の使用事例にアバターが喋る動画
+slug: 2022-12-16-weekly-archived
 type: post
 date: 2022-12-16
 tags:

@@ -5,6 +5,7 @@ authorTwitter: jiyuujinlab
 category: article
 title: アーカイヴ - 2022/12/03 週
 explain: svh・dvh の全ブラウザ対応、Advent Calendar 2022 の季節、JSConf JP 2022 の速報、プロダクトマネージャーカンファレンス 2022 の速報
+slug: 2022-12-03-weekly-archived
 type: post
 date: 2022-12-03
 tags:
