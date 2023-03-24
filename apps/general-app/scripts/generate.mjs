@@ -30,7 +30,9 @@ async function main() {
     })
 
     try {
-      await page.goto('file:///' + path.join(process.cwd(), 'scripts/reaction-preview.html'))
+      await page.goto('file:///' + path.join(process.cwd(), 'scripts/reaction-preview.html'), {
+        waitUntil: 'networkidle0',
+      })
 
       await page.$eval(
         'h1',
