@@ -24,6 +24,10 @@ jobs:
         with:
           node-version: '16.x'
 
+      - name: Install Dependencies
+        run: |
+          yarn
+
       - name: Cache node modules
         uses: actions/cache@v2
         env:
@@ -38,7 +42,6 @@ jobs:
 
       - name: Transpile
         run: |
-          npm install
-          npm run build
+          yarn build
         env:
           CI: true

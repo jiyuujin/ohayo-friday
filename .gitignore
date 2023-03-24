@@ -21,6 +21,9 @@ yarn-error.log*
 
 JOURNEY.md
 
+# turbo
+.turbo
+
 .idea
 
-public/feeds.xml
+apps/general-app/public/feeds.xml
