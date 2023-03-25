@@ -1,6 +1,6 @@
 import path from 'path'
 import fs from 'fs'
-import puppeteer from 'puppeteer'
+import chromium from 'chrome-aws-lambda'
 import frontMatter from 'front-matter'
 
 const postsDirectory = path.join(process.cwd(), 'src/pages/posts')
@@ -20,9 +20,12 @@ async function main() {
 
   for (const mdFilename of postFiles) {
     const title = await getPostReaction(mdFilename)
-    const browser = await puppeteer.launch({
-      headless: true,
-      args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    const browser = await chromium.puppeteer.launch({
+      headless: chromium.headless,
+      args: chromium.args,
+      defaultViewport: chromium.defaultViewport,
+      executablePath: await chromium.executablePath,
+      ignoreHTTPSErrors: true,
     })
     const page = await browser.newPage()
     await page.setExtraHTTPHeaders({
@@ -30,7 +33,18 @@ async function main() {
     })
 
     try {
-      await page.goto('file:///' + path.join(process.cwd(), 'scripts/reaction-preview.html'))
+      await page.evaluate(() => {
+        const style = document.createElement('style')
+        style.textContent = `
+          @import url('//fonts.googleapis.com/css?family=M+PLUS+Rounded+1c|Roboto:300,400,500,700|Material+Icons');
+          div, input, a, p{ font-family: "M PLUS Rounded 1c", sans-serif; };`
+        document.head.appendChild(style)
+        document.body.style.fontFamily = '\'M PLUS Rounded 1c\', sans-serif'
+      })
+
+      await page.goto('file:///' + path.join(process.cwd(), 'scripts/reaction-preview.html'), {
+        waitUntil: 'networkidle0',
+      })
 
       await page.$eval(
         'h1',
