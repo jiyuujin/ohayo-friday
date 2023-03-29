@@ -15,7 +15,7 @@ import path from 'path'
 const currentDir = './src/pages/posts'
 
 let feed = new Feed({
-  title: 'AIエンジニアのつどい',
+  title: 'AIer.info',
   description: '週刊でAI界隈の最新情報を記録しています',
   feed_url: 'https://ohayo-ai.nekohack.me/feeds.xml',
   site_url: 'https://ohayo-ai.nekohack.me/',
@@ -34,7 +34,8 @@ fs.readdir(currentDir, function (err, files) {
         tree.children.forEach((yaml) => {
           if (yaml.type === 'yaml') {
             if (/title: .*\n/.test(yaml.value)) {
-              const title = /title: .*\n/g.exec(yaml.value)[0]
+              const title = /title: .*\n/g
+                .exec(yaml.value)[0]
                 .replace('title: ', '')
                 .replace('\n', '')
               feed.items.push({
