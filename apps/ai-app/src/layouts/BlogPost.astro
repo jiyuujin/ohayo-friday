@@ -62,72 +62,54 @@ let allIcons = [
 
   <body>
     <GitHubRibbon />
-    <div class="header">
-      <BlogHeader {title} description={explain} />
-    </div>
-    <div class="section">
-      <div class="main">
-        <BlogPost {title} {author} {heroImage} {publishDate} {alt}>
-          <div class="article">
-            <div class="post-detail">
-              <div style={{ textAlign: "left" }}>
-                <div class="headline">{explain}</div>
+    <main>
+      <div class="header">
+        <BlogHeader {title} description={explain} />
+      </div>
+      <BlogPost {title} {author} {heroImage} {publishDate} {alt}>
+        <div class="article">
+          <div class="post-detail">
+            <div style={{ textAlign: "left" }}>
+              <div class="headline">{explain}</div>
+            </div>
+            <p style={{ margin: 0 }}>それでは、先週の主なアップデートについて振り返っていきましょう。</p>
+            {headings.filter((h) => h.depth === 3).length !== 0 && (
+              <div aria-label="Blog toc">
+                <details class="grid">
+                  <summary>目次</summary>
+                  {headings
+                    .filter((h) => h.depth === 3)
+                    .map((h) => (
+                      <p style={{ margin: 0 }}>
+                        <a href={`${url}#${h.slug}`}>
+                          {h.text}
+                        </a>
+                      </p>
+                    ))}
+                </details>
               </div>
-              <slot />
-            </div>
+            )}
+            <slot />
           </div>
-        </BlogPost>
-      </div>
-      <div class="side">
-        <div class="avatar">
-          <Image
-            src="https://i.imgur.com/X0CcoU9.jpg"
-            alt=""
-            width={144}
-            height={144}
-          />
         </div>
-        <div class="social">
-          {allIcons.map((s) => (
-            <a href={s.url} target="_blank" rel="noopenner noreferrer">
-              <Icon name={`${s.name}_logo`} />
-            </a>
-          ))}
-        </div>
-        {headings.filter((h) => h.depth === 3).length !== 0 && (
-          <div aria-label="Blog toc">
-            <h2>目次</h2>
-            <div class="grid">
-              {headings
-                .filter((h) => h.depth === 3)
-                .map((h) => (
-                  <p>
-                    <a href={`${url}#${h.slug}`}>
-                      {h.text}
-                    </a>
-                  </p>
-                ))}
-            </div>
-          </div>
-        )}
-        <div aria-label="Blog recent list">
-          <h2>最近 (直近 5 件) の投稿</h2>
-          <div class="grid">
-            {allPosts
-              .slice(0, 5)
-              .map((p) => (
-                <p>
-                  <a href={p.url}>
-                    {p.frontmatter.title}
-                  </a>
-                </p>
-              ))}
-          </div>
+      </BlogPost>
+      <div aria-label="Blog recent list">
+        <h2>最近 (直近 5 件) の投稿</h2>
+        <div class="grid">
+          {allPosts
+            .slice(0, 5)
+            .map((p) => (
+              <p>
+                <a href={p.url}>
+                  {p.frontmatter.title}
+                </a>
+              </p>
+            ))}
         </div>
       </div>
-    </div>
-    <div class="footer">
-      <BlogFooter {author} />
-    </div>
+      <div class="footer">
+        <BlogFooter {author} />
+      </div>
+    </main>
   </body>
 </html>

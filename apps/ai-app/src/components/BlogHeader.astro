@@ -1,27 +1,39 @@
 ---
-import Author from './Author.astro';
-
-const { title, description } = Astro.props
+const { title } = Astro.props
 ---
 
 <div class="header">
-  <h1 class="latest">{title}</h1>
-  <p>{description}</p>
-  <Author name="@jiyuujin" href="https://twitter.com/jiyuujinlab" />
+  <h1 class="latest" title={title ? title : 'AIer.info'}>
+    {title ? title : 'AIer.info'}
+  </h1>
 </div>
 
 <style>
   .latest {
-    font-size: 2.25rem;
+    background: linear-gradient(300deg, #93f5ec 20%, #a77bf3 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    white-space: nowrap;
+    font-size: 2.5rem;
     font-weight: 700;
+    line-height: 1.2;
   }
 
   .header {
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--theme-divider);
+    display: grid;
+    place-items: center;
+    height: 120px;
   }
 
   .header > * {
     margin: 0;
+  }
+
+  @media (max-width: 600px) {
+    .header {
+      flex-direction: column;
+    }
   }
 </style>

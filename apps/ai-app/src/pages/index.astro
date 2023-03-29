@@ -5,7 +5,7 @@ import BlogFooter from '../components/BlogFooter.astro';
 import BlogPostPreview from '../components/BlogPostPreview.astro';
 import GitHubRibbon from '../components/GitHubRibbon.vue';
 
-let title = 'AIエンジニアのつどい';
+let title = 'AIer.info';
 let description = '週刊でAI界隈の最新情報を記録しています';
 let permalink = 'https://ohayo-ai.nekohack.me/';
 let author = 'jiyuujin';
@@ -39,19 +39,20 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new 
 
   <body>
     <GitHubRibbon />
-    <div class="header">
-      <BlogHeader title={title} description={description} />
-    </div>
-    <div class="content">
-      <h2>投稿の一覧</h2>
-      <div aria-label="Blog post list">
-        <div class="grid">
-          {allPosts.map((p) => <BlogPostPreview post={p} />)}
+    <main>
+      <div class="header">
+        <BlogHeader description={description} />
+      </div>
+      <div class="content">
+        <div aria-label="Blog post list">
+          <div class="grid">
+            {allPosts.map((p) => <BlogPostPreview post={p} />)}
+          </div>
         </div>
       </div>
-    </div>
-    <div class="footer">
-      <BlogFooter {author} />
-    </div>
+      <div class="footer">
+        <BlogFooter {author} />
+      </div>
+    </main>
   </body>
 </html>
