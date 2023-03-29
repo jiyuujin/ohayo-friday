@@ -5,13 +5,15 @@
   align-items: flex-start;
   justify-content: space-around;
   @media (max-width: 600px) {
+    margin: 8px 1.02rem;
     flex-direction: column;
   }
 }
 
 .main {
   padding: 0 8px;
-  width: 70%;
+  margin: 0;
+  width: calc(70% - 16px);
   background: #fff;
   @media (max-width: 600px) {
     padding: 0;
@@ -21,7 +23,8 @@
 
 .side {
   padding: 0 8px;
-  width: 30%;
+  margin: 0;
+  width: calc(30% - 16px);
   background: rgba(232, 242, 255, 100%);
   @media (max-width: 600px) {
     padding: 0;

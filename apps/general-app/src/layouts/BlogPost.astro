@@ -72,7 +72,22 @@ let allIcons = [
             <div class="post-detail">
               <div style={{ textAlign: "left" }}>
                 <div class="headline">{explain}</div>
-              </div>
+                <p style={{ margin: 0 }}>それでは、先週の主なアップデートについて振り返っていきましょう。</p>
+                <div aria-label="Blog toc">
+                  <details class="grid">
+                    <summary>目次</summary>
+                    {headings
+                      .filter((h) => h.depth === 3)
+                      .map((h) => (
+                        <p style={{ margin: 0 }}>
+                          <a href={`${url}#${h.slug}`}>
+                            {h.text}
+                          </a>
+                        </p>
+                      ))}
+                    </details>
+                  </div>
+                </div>
               <slot />
             </div>
           </div>
