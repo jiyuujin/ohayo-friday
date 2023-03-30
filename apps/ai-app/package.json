@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "build": "npm run build:feeds && npm run build:front",
+    "build": "npm run build:feeds && npm run build:og-gen && npm run build:front",
     "build:front": "astro build",
     "build:feeds": "node --loader ts-node/esm scripts/feeds.mjs",
     "build:og-gen": "node --loader ts-node/esm scripts/generate.mjs",
