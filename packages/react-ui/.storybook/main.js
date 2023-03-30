@@ -6,6 +6,8 @@ module.exports = {
     builder: '@storybook/builder-vite',
   },
 
+  addons: ['@storybook/addon-a11y', '@storybook/addon-essentials', '@storybook/addon-links'],
+
   stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'],
 
   async viteFinal(config) {
