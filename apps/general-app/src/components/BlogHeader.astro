@@ -1,28 +1,47 @@
 ---
-import Author from './Author.astro';
-
 const { title, description } = Astro.props
 ---
 
 <div class="header">
   <h1 class="latest">{title}</h1>
   <p>{description}</p>
-  <Author name="@jiyuujin" href="https://twitter.com/jiyuujinlab" />
 </div>
 
 <style>
   .latest {
-    font-size: 2.25rem;
+    font-size: 1.6rem;
     font-weight: 700;
   }
 
   .header {
-    padding-bottom: 2rem;
-    margin: 0 1.02rem;
-    border-bottom: 1px solid var(--theme-divider);
+    padding: 2em 1em 2em;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    gap: 8px;
+    background-color: rgba(147, 245, 236, 0.6);
+    color: #303030;
+  }
+
+  .header p {
+    max-width: 300px;
   }
 
   .header > * {
     margin: 0;
+  }
+
+  @media(min-width: 768px) {
+    .latest {
+      font-size: 2.4rem;
+    }
+
+    .header {
+      padding: 4em 2em 4em;
+    }
+
+    .header p {
+      max-width: 600px;
+    }
   }
 </style>

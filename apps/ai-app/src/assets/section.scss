@@ -1,6 +1,5 @@
 .section {
   margin: 8px 0;
-  background: rgba(232, 242, 255, 100%);
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
@@ -13,7 +12,6 @@
   padding: 0 8px;
   margin: 0;
   width: calc(100% - 16px);
-  background: #fff;
   @media (min-width: 768px) {
     padding: 0;
   }

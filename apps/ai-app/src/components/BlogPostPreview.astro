@@ -27,20 +27,11 @@ const { post } = Astro.props
           {`: ${post.frontmatter.explain}`}
         </span>
       )}
-      </h2>
-    <p>
-      {post.frontmatter.title}
-    </p>
+    </h2>
   </a>
 </div>
 
 <style>
-  .item {
-    border-radius: 10px;
-    padding: 12px 0;
-    text-align: left;
-  }
-
   .item a {
     color: #2c2e2f;
     text-decoration: none;
@@ -49,7 +40,7 @@ const { post } = Astro.props
     align-items: flex-start;
     justify-content: space-between;
     vertical-align: middle;
-    border-left: 3px solid #fff;
+    gap: 4px;
     padding-left: 1em;
   }
 
@@ -60,12 +51,12 @@ const { post } = Astro.props
   .item h2 {
     margin: 0;
     text-align: left;
-    font-size: 1.2rem;
+    font-size: 1.08rem;
   }
 
-  .item p {
-    margin-bottom: 0;
-    text-align: left;
-    font-size: 0.96rem;
+  @media(min-width: 768px) {
+    .item h2 {
+      font-size: 0.92rem;
+    }
   }
 </style>
