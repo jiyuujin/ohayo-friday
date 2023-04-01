@@ -11,6 +11,7 @@ import '../assets/lib/customize/_article.scss'
 import '../assets/lib/customize/_twitter.scss'
 import '../assets/lib/_layout.scss'
 import '../assets/player.scss'
+import '../assets/reset.scss'
 import '../assets/section.scss'
 import '../assets/summary.scss'
 import Icon from '../components/Icon.astro'
@@ -37,27 +38,6 @@ let allIcons = [
       {permalink}
       image={`https://ohayo-friday.nekohack.me/og/${slug}.png`}
     />
-
-    <style is:global>
-      body {
-        background-color: rgba(232, 242, 255, 100%);
-        color: #303030;
-      }
-
-      a {
-        color: #303030;
-      }
-
-      .article .post-detail h2,
-      .article .post-detail h3,
-      .article .post-detail h4,
-      .article .post-detail p,
-      .article .post-detail li,
-      .article .post-detail td,
-      .article .post-detail tr {
-        color: #303030;
-      }
-    </style>
   </head>
 
   <body>
