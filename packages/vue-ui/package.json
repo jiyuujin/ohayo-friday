@@ -1,0 +1,28 @@
+{
+  "name": "vue-ui",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx,vue,md,mdx,css,html,yml,yaml,scss,sass}\" --ignore-path .prettierignore",
+    "lint": "npm run eslint",
+    "lint:fix": "npm run eslint:fix",
+    "eslint": "eslint . --ext js,jsx,ts,tsx,vue --ignore-path .gitignore",
+    "eslint:fix": "eslint . --ext js,jsx,ts,tsx,vue --ignore-path .gitignore --fix",
+    "storybook": "start-storybook -p 6007",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "vue": "3.2.47"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "6.5.16",
+    "@storybook/addon-essentials": "6.5.16",
+    "@storybook/addon-links": "6.5.16",
+    "@storybook/builder-vite": "0.2.2",
+    "@storybook/vue3": "6.5.16",
+    "@vitejs/plugin-vue": "3.0.1",
+    "storybook": "6.5.16",
+    "vite": "3.0.4",
+    "vue-loader": "16.8.3"
+  }
+}

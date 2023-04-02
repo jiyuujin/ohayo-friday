@@ -8,7 +8,7 @@
     "build": "turbo run build",
     "format": "turbo run format",
     "lint": "turbo run lint",
-    "storybook": "turbo run storybook",
+    "storybook": "turbo run storybook --parallel",
     "build-storybook": "turbo run build-storybook"
   },
   "devDependencies": {
@@ -23,7 +23,8 @@
     "textlint-rule-preset-ja-technical-writing": "^7.0.0",
     "textlint-rule-preset-nekohack-inc": "git+https://github.com/nekohack/textlint-rule-preset-nekohack-inc.git",
     "textlint-rule-spellcheck-tech-word": "^5.0.0",
-    "turbo": "1.5.5"
+    "turbo": "1.5.5",
+    "vue-eslint-parser": "9.1.1"
   },
   "engines": {
     "yarn": ">=1.22.0",
