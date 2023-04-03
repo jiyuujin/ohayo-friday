@@ -1,6 +1,8 @@
 ---
 import { Image } from '@astrojs/image/components'
 
+import { Icon } from '@ohayo/react-ui'
+
 import BaseHead from '../components/BaseHead.astro'
 import BlogHeader from '../components/BlogHeader.astro'
 import BlogFooter from '../components/BlogFooter.astro'
@@ -14,7 +16,6 @@ import '../assets/player.scss'
 import '../assets/reset.scss'
 import '../assets/section.scss'
 import '../assets/summary.scss'
-import Icon from '../components/Icon.astro'
 
 const { content, headings } = Astro.props
 const { lang, title, explain, slug, publishDate, author, heroImage, permalink, url, alt } = content
@@ -25,7 +26,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new 
 let allIcons = [
   { name: 'github', url: 'https://github.com/jiyuujin' },
   // { name: 'hatena', url: 'https://hatena.ne.jp/' },
-  { name: 'note', url: 'https://note.com/uraneko' },
+  // { name: 'note', url: 'https://note.com/uraneko' },
   { name: 'twitter', url: 'https://twitter.com/jiyuujinlab' },
 ]
 ---
@@ -85,7 +86,7 @@ let allIcons = [
         <div class="social">
           {allIcons.map((s) => (
             <a href={s.url} target="_blank" rel="noopenner noreferrer">
-              <Icon name={`${s.name}_logo`} />
+              <Icon name={`${s.name}`} />
             </a>
           ))}
         </div>

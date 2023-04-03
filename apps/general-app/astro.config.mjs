@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config'
 import remarkToc from 'remark-toc'
 import rehypeToc from 'rehype-toc'
 import image from '@astrojs/image'
+import react from '@astrojs/react'
 import svelte from '@astrojs/svelte'
 import vue from '@astrojs/vue'
 
@@ -29,6 +30,7 @@ export default defineConfig({
       ],
     ],
     integrations: [
+        react(),
         svelte(),
         vue(),
         image({
