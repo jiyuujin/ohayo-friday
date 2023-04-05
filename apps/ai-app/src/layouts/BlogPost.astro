@@ -1,10 +1,11 @@
 ---
 import { Image } from '@astrojs/image/components'
 
+import { Post } from '@ohayo/react-ui'
+
 import BaseHead from '../components/BaseHead.astro'
 import BlogHeader from '../components/BlogHeader.astro'
 import BlogFooter from '../components/BlogFooter.astro'
-import BlogPost from '../components/BlogPost.astro'
 import GitHubRibbon from '../components/GitHubRibbon.vue'
 
 import '../assets/lib/customize/_article.scss'
@@ -54,7 +55,7 @@ let allIcons = [
       <div class="header">
         <BlogHeader {title} description={explain} />
       </div>
-      <BlogPost {title} {author} {heroImage} {publishDate} {alt}>
+      <Post.Content>
         <div class="article">
           <div class="post-detail">
             <div style={{ textAlign: "left" }}>
@@ -80,7 +81,7 @@ let allIcons = [
             <slot />
           </div>
         </div>
-      </BlogPost>
+      </Post.Content>
       <div aria-label="Blog recent list">
         <h2>最近 (直近 5 件) の投稿</h2>
         <div class="grid">

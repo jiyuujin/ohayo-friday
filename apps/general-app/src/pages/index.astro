@@ -1,8 +1,9 @@
 ---
+import { Post } from '@ohayo/react-ui'
+
 import BaseHead from '../components/BaseHead.astro';
 import BlogHeader from '../components/BlogHeader.astro';
 import BlogFooter from '../components/BlogFooter.astro';
-import BlogPostPreview from '../components/BlogPostPreview.astro';
 import GitHubRibbon from '../components/GitHubRibbon.vue';
 
 let title = '金曜日のエンジニアのつどい';
@@ -46,7 +47,12 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new 
       <h2>投稿の一覧</h2>
       <div aria-label="Blog post list">
         <div class="grid">
-          {allPosts.map((p) => <BlogPostPreview post={p} />)}
+          {allPosts.map((p) =>
+            <Post
+              url={p.url}
+              title={`${p.frontmatter.title}: ${p.frontmatter.explain}`}
+            />
+          )}
         </div>
       </div>
     </div>
