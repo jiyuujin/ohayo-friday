@@ -1,4 +1,3 @@
-import React from 'react'
 import { item, itemLink, title as titleStyle, subtitle as subtitleStyle } from './Post.css'
 
 export interface PostProps {

@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config'
 import remarkToc from 'remark-toc'
 import rehypeToc from 'rehype-toc'
 import image from '@astrojs/image'
-import react from '@astrojs/react'
+import solidJs from '@astrojs/solid-js'
 import svelte from '@astrojs/svelte'
 import vue from '@astrojs/vue'
 import vanillaExtract from 'astro-vanilla-extract'
@@ -31,7 +31,7 @@ export default defineConfig({
       ],
     ],
     integrations: [
-        react(),
+        solidJs(),
         svelte(),
         vue(),
         vanillaExtract(),
