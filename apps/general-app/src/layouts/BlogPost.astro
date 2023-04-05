@@ -1,12 +1,11 @@
 ---
 import { Image } from '@astrojs/image/components'
 
-import { Icon } from '@ohayo/react-ui'
+import { Icon, Post } from '@ohayo/react-ui'
 
 import BaseHead from '../components/BaseHead.astro'
 import BlogHeader from '../components/BlogHeader.astro'
 import BlogFooter from '../components/BlogFooter.astro'
-import BlogPost from '../components/BlogPost.astro'
 import GitHubRibbon from '../components/GitHubRibbon.vue'
 
 import '../assets/lib/customize/_article.scss'
@@ -48,7 +47,7 @@ let allIcons = [
     </div>
     <div class="section">
       <div class="main">
-        <BlogPost {title} {author} {heroImage} {publishDate} {alt}>
+        <Post.Content>
           <div class="article">
             <div class="post-detail">
               <div style={{ textAlign: "left" }}>
@@ -72,7 +71,7 @@ let allIcons = [
               <slot />
             </div>
           </div>
-        </BlogPost>
+        </Post.Content>
       </div>
       <div class="side">
         <div class="avatar">

@@ -5,6 +5,7 @@ import image from '@astrojs/image'
 import react from '@astrojs/react'
 import svelte from '@astrojs/svelte'
 import vue from '@astrojs/vue'
+import vanillaExtract from 'astro-vanilla-extract'
 
 // https://astro.build/config
 export default defineConfig({
@@ -33,6 +34,7 @@ export default defineConfig({
         react(),
         svelte(),
         vue(),
+        vanillaExtract(),
         image({
             serviceEntryPoint: '@astrojs/image/sharp',
         }),
