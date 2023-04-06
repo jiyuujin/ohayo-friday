@@ -56,6 +56,12 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new 
       .grid {
         border-bottom: 1px solid #e6f6f5;
       }
+
+      @media(min-width: 768px) {
+        .grid {
+          padding: 8px 16px;
+        }
+      }
     </style>
   </head>
 
