@@ -29,11 +29,23 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new 
         transition: 200ms;
       }
 
+      .content {
+        padding: 160px 40px;
+        max-width: 1246px;
+        margin: 0 auto;
+      }
+
       .grid {
         display: grid;
         gap: 20px;
         grid-template-columns: repeat(auto, 1fr, auto);
-        padding: 12px 0;
+        padding: 8px 48px;
+      }
+
+      @media(min-width: 1024px) {
+        .content {
+          padding: 80px 20px;
+        }
       }
     </style>
   </head>
@@ -45,15 +57,14 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new 
     </div>
     <div class="content">
       <h2>投稿の一覧</h2>
-      <div aria-label="Blog post list">
-        <div class="grid">
-          {allPosts.map((p) =>
-            <Post
-              url={p.url}
-              title={`${p.frontmatter.title}: ${p.frontmatter.explain}`}
-            />
-          )}
-        </div>
+      <div class="grid" aria-label="Blog post list">
+        {allPosts.map((p) =>
+          <Post
+            url={p.url}
+            date={p.frontmatter.title}
+            title={p.frontmatter.explain}
+          />
+        )}
       </div>
     </div>
     <div class="footer">

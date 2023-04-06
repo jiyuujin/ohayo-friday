@@ -4,27 +4,21 @@ const { title, description } = Astro.props
 
 <div class="header">
   <h1 class="latest">{title}</h1>
-  <p>{description}</p>
 </div>
 
 <style>
   .latest {
+    color: #303030;
     font-size: 1.6rem;
     font-weight: 700;
+    line-height: 1.2;
   }
 
   .header {
-    padding: 2em 1em 2em;
-    margin: 0;
     display: grid;
     place-items: center;
-    gap: 8px;
+    height: 120px;
     background-color: rgba(147, 245, 236, 0.6);
-    color: #303030;
-  }
-
-  .header p {
-    max-width: 300px;
   }
 
   .header > * {

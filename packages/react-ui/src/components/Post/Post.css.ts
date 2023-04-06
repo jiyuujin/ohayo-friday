@@ -2,7 +2,7 @@ import { style } from '@vanilla-extract/css'
 
 export const item = style({
   borderRadius: '10px',
-  padding: '12px 0',
+  padding: '24px 0',
   textAlign: 'left',
 })
 
@@ -14,18 +14,36 @@ export const itemLink = style({
   alignItems: 'flex-start',
   justifyContent: 'space-between',
   verticalAlign: 'middle',
-  borderLeft: '3px solid #fff',
-  paddingLeft: '1em',
+  ':hover': {
+    opacity: 0.6,
+  },
+})
+
+export const date = style({
+  fontSize: '14px',
+  fontWeight: 'normal',
+  lineHeight: 1,
+  padding: 0,
+  margin: 0,
+  transition: 'color .1s',
 })
 
 export const title = style({
+  fontSize: '20px',
+  fontWeight: 'normal',
+  lineHeight: 1.2,
+  padding: 0,
   margin: 0,
-  textAlign: 'left',
-  fontSize: '1.2rem',
+  marginTop: '10px',
+  transition: 'color .1s',
 })
 
 export const subtitle = style({
-  marginBottom: 0,
-  textAlign: 'left',
-  fontSize: '0.92rem',
+  fontSize: '16px',
+  fontWeight: 'normal',
+  lineHeight: 1,
+  padding: 0,
+  margin: 0,
+  marginTop: '4px',
+  transition: 'color .1s',
 })

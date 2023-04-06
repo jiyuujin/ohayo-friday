@@ -50,7 +50,11 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new 
         display: grid;
         gap: 20px;
         grid-template-columns: repeat(auto, 1fr, auto);
-        padding: 12px 0;
+        padding: 8px 48px;
+      }
+
+      .grid {
+        border-bottom: 1px solid #e6f6f5;
       }
     </style>
   </head>
@@ -62,18 +66,15 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new 
         <BlogHeader description={description} />
       </div>
       <div class="content">
-        <div aria-label="Blog post list">
-          <div class="grid">
-            {allPosts.map((p) =>
-              <Post
-                url={p.url}
-                title={`${p.frontmatter.title}: ${p.frontmatter.explain}`}
-                subtitle={p.frontmatter.title}
-              />
-            )}
-            </div>
+        <div class="grid" aria-label="Blog post list">
+          {allPosts.map((p) =>
+            <Post
+              url={p.url}
+              title={`${p.frontmatter.title}: ${p.frontmatter.explain}`}
+            />
+          )}
         </div>
-      </div>
+        </div>
       <div class="footer">
         <BlogFooter {author} />
       </div>
