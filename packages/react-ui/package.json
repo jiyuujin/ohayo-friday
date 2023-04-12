@@ -23,7 +23,7 @@
     "@storybook/addon-links": "6.5.16",
     "@storybook/builder-vite": "0.4.2",
     "@storybook/react": "6.5.16",
-    "@types/react": "18.0.34",
+    "@types/react": "18.0.35",
     "@types/react-dom": "18.0.11",
     "@vanilla-extract/css": "1.11.0",
     "@vanilla-extract/vite-plugin": "3.8.0",
