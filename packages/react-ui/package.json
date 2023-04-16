@@ -30,7 +30,7 @@
     "@vitejs/plugin-react": "3.1.0",
     "storybook": "6.5.16",
     "ts-pattern": "4.2.2",
-    "typescript": "5.0.2",
+    "typescript": "5.0.4",
     "vite": "4.2.1",
     "vite-plugin-inspect": "0.7.18"
   }
