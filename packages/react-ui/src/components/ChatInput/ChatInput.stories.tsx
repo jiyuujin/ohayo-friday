@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import { action } from '@storybook/addon-actions'
-import { Story, Meta } from '@storybook/react'
+import { StoryFn, Meta } from '@storybook/react'
 import { ChatInput, ChatInputProps } from '../ChatInput/ChatInput'
 
 export default {
@@ -12,7 +12,7 @@ export default {
   },
 } as Meta
 
-export const Default: Story<ChatInputProps> = (args) => (
+export const Default: StoryFn<ChatInputProps> = (args) => (
   <Fragment>
     <ChatInput {...args}></ChatInput>
     <ChatInput {...args} id="focus"></ChatInput>

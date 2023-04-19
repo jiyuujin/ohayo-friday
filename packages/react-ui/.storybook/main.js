@@ -2,8 +2,9 @@ const react = require('@vitejs/plugin-react')
 const Inspect = require('vite-plugin-inspect')
 
 module.exports = {
-  core: {
-    builder: '@storybook/builder-vite',
+  framework: {
+    name: '@storybook/react-vite',
+    options: {},
   },
 
   addons: ['@storybook/addon-a11y', '@storybook/addon-essentials', '@storybook/addon-links'],
