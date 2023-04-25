@@ -13,7 +13,9 @@ let description = '週刊でAI界隈の最新情報を記録しています'
 let permalink = 'https://ohayo-ai.nekohack.me/'
 let author = 'jiyuujin'
 
-const allPosts = await getCollection('posts')
+const allPosts = (await getCollection('posts')).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+)
 ---
 
 <html lang="en">
