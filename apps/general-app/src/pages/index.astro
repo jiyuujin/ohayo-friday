@@ -25,7 +25,6 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new 
         flex-direction: column;
         justify-content: space-between;
         width: 100%;
-        background: #fff;
         transition: 200ms;
       }
 
@@ -44,7 +43,8 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new 
 
       @media(min-width: 1024px) {
         .content {
-          padding: 160px 40px;
+          /*padding: 160px 40px;*/
+          padding: 40px 40px;
         }
 
         .grid {
