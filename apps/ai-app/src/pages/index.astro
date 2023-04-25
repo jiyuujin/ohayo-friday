@@ -1,18 +1,19 @@
 ---
+import { getCollection } from 'astro:content'
+
 import { Post } from '@ohayo/react-ui'
 
-import BaseHead from '../components/BaseHead.astro';
-import BlogHeader from '../components/BlogHeader.astro';
-import BlogFooter from '../components/BlogFooter.astro';
-import GitHubRibbon from '../components/GitHubRibbon.vue';
+import BaseHead from '../components/BaseHead.astro'
+import BlogHeader from '../components/BlogHeader.astro'
+import BlogFooter from '../components/BlogFooter.astro'
+import GitHubRibbon from '../components/GitHubRibbon.vue'
 
-let title = 'AIer.info';
-let description = '週刊でAI界隈の最新情報を記録しています';
-let permalink = 'https://ohayo-ai.nekohack.me/';
-let author = 'jiyuujin';
+let title = 'AIer.info'
+let description = '週刊でAI界隈の最新情報を記録しています'
+let permalink = 'https://ohayo-ai.nekohack.me/'
+let author = 'jiyuujin'
 
-let allPosts = await Astro.glob('./posts/*.md');
-allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
+const allPosts = await getCollection('posts')
 ---
 
 <html lang="en">
@@ -61,8 +62,8 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new 
         <div class="grid" aria-label="Blog post list">
           {allPosts.map((p) =>
             <Post
-              url={p.url}
-              title={`${p.frontmatter.title}: ${p.frontmatter.explain}`}
+              url={`/posts/${p.slug}`}
+              title={`${p.data.title}: ${p.data.explain}`}
             />
           )}
         </div>
