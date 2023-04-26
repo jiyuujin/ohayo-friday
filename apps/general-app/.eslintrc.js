@@ -21,4 +21,7 @@ module.exports = {
       parser: '@typescript-eslint/parser',
     },
   ],
+  rules: {
+    '@typescript-eslint/triple-slash-reference': 0,
+  },
 }
