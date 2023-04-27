@@ -3,7 +3,7 @@ import fs from 'fs'
 import puppeteer from 'puppeteer'
 import frontMatter from 'front-matter'
 
-const postsDirectory = path.join(process.cwd(), 'src/pages/posts')
+const postsDirectory = path.join(process.cwd(), 'src/content/posts')
 
 async function getPostReaction(filename) {
   let result = ''
